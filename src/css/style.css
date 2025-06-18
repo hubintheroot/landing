@@ -409,6 +409,8 @@ footer {
 }
 
 footer .menu-box ul {
+  width: 85px;
+  height: 120px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -416,9 +418,9 @@ footer .menu-box ul {
   color: #767676;
   font-weight: 400;
   line-height: 100%;
-  margin-bottom: 4px;
 }
 
 footer .menu-box .menu-item {
   text-align: right;
+  height: 100%;
 }
