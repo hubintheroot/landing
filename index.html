@@ -27,9 +27,7 @@
       <!-- TODO: 메뉴 컨테이너는 모바일일 때 크기와 pc일때 크기가 다름 -->
       <div class="menu-container">
         <!-- TODO: 토글버튼은 모바일에서만 보여줄 것 -->
-        <button type="button" class="btn-menu-toggle">
-          <p class="sr-only">메뉴 토글</p>
-        </button>
+        <button type="button" class="btn-menu-toggle"></button>
         <div class="menu-box">
           <nav class="menu-nav-box">
             <ul>
@@ -135,7 +133,8 @@
                 text
               </p>
             </div>
-            <div class="input-container">
+            <!-- TODO: -->
+            <form action="" class="input-container">
               <div class="input-box">
                 <input
                   type="email"
@@ -143,8 +142,9 @@
                   placeholder="Enter your e-mail address"
                 />
               </div>
-              <button class="subscribe" type="button">Subscribe</button>
-            </div>
+              <button class="subscribe" type="submit">Subscribe</button>
+            </form>
+            <!-- TODO: -->
           </div>
         </div>
       </section>
@@ -203,7 +203,10 @@
         else e.target.classList.add("open");
       });
 
-      subBtn.addEventListener("click", (e) => modal.showModal());
+      subBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        modal.showModal();
+      });
       closeModalBtn.addEventListener("click", (e) => modal.close());
     </script>
   </body>
