@@ -1,4 +1,424 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
 * {
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
+}
+button {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+/* 기본 버튼 디자인 */
+button {
+  background-color: #d97652;
+  color: #fff;
+  padding: 11px 24px;
+  border-radius: 40px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  text-align: center;
+}
+
+header {
+  padding: 24px 20px;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  background-color: #f2e9d8;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.logo-box {
+  width: 92px;
+  height: 28px;
+}
+
+.logo-box img {
+  aspect-ratio: 92 / 28;
+}
+
+.menu-container {
+  padding: 22px 20px;
+  position: absolute;
+  top: 0;
+  left: calc(100% - 52px - 20px);
+  display: flex;
+  flex-direction: row;
+  transition: transform 0.8s;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 9999;
+
+  & > :not(.btn-menu-toggle) {
+    display: none;
+  }
+}
+
+/* 모바일 메뉴 여는 버튼 TODO: pc에서는 숨길 것 */
+.btn-menu-toggle {
+  background-color: rgba(0, 0, 0, 0);
+  background-image: url("../svg/menu.svg");
+  background-repeat: no-repeat;
+  background-size: 32px 32px;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+}
+/* TODO: 모바일 메뉴열기 */
+.menu-container:has(.btn-menu-toggle.open) {
+  position: fixed;
+  transform: translate(calc(-289px + 72px), 0);
+  width: 289px;
+  height: 100vh;
+  flex-direction: column;
+  background-color: #263140;
+
+  & .btn-menu-toggle {
+    background-image: url("../svg/arrow-right.svg");
+  }
+  & > :not(.btn-menu-toggle) {
+    display: flex;
+  }
+
+  & .menu-box {
+    margin-top: 66px;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  & .menu-nav-box ul {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    & .menu-item a {
+      color: #fff;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 100%;
+    }
+  }
+  & .btn-download {
+    margin-top: 50px;
+    display: inline-block;
+    width: min-content;
+  }
+}
+
+/* TODO: 범용 text box */
+.text-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.text-box .title-text {
+  font-weight: 700;
+  line-height: 100%;
+  font-size: 24px;
+  text-align: center;
+}
+.text-box .desc-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: calc(100% + 2px);
+  vertical-align: middle;
+  text-align: center;
+}
+
+main {
+  position: relative;
+}
+
+/* TODO: 섹션 1 */
+.section-01 {
+  position: relative;
+  background-color: #f2e9d8;
+  padding: 40px 60px 390px;
+  text-align: start;
+}
+
+.section-01 .title-text {
+  font-weight: 700;
+  width: 264px;
+}
+
+.section-01 .desc-text {
+  width: 280px;
+}
+
+.section-01 .img-box {
+  width: 197px;
+  height: 422px;
+  position: absolute;
+  bottom: -62px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.section-01 .img {
+  aspect-ratio: 197 / 422;
+}
+
+/* TODO: 섹션 2 */
+
+[class^="section"]:not(.section-01) {
+  padding-left: 32px;
+  padding-right: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-02 {
+  background-color: #fff;
+  position: relative;
+  padding: 40px 32px;
+}
+
+.section-02 .img-box {
+  box-shadow: 10px 10px 20px 0px #00000040;
+  border-radius: 18px;
+  overflow: hidden;
+  width: 326px;
+  height: 190px;
+}
+
+.section-02 img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: 50% 30%;
+}
+
+.section-02 .text-box {
+  margin-top: 40px;
+  gap: 20px;
+}
+
+.section-02 [class$="text"] {
+  text-align: left;
+}
+
+/* TODO: 섹션 3 */
+
+.section-03[class="section-03"] {
+  overflow-x: hidden;
+  align-items: flex-start;
+}
+
+.section-03 .text-box {
+  margin-top: 20px;
+}
+
+.section-03 .title-text {
+  font-size: 24px;
+  color: #d97652;
+}
+.section-03 .desc-text {
+  font-size: 16px;
+}
+
+.section-03 .desc-text strong {
+  font-weight: 700;
+  color: #d97652;
+}
+
+.section-03 .caroulcel-container {
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+}
+
+.section-03 .caroulcel-container .img-box {
+  width: 260px;
+  height: 260px;
+  border-radius: 18px;
+  box-shadow: 10px 10px 20px 0px #00000040;
+  overflow: hidden;
+
+  & img {
+    aspect-ratio: 1 / 1;
+  }
+}
+
+.section-03 .caroulcel-container + .text-box {
+  margin-top: 60px;
+}
+.section-03 .caroulcel-container + .text-box .desc-text {
+  text-align: left;
+}
+
+.section-03 button {
+  align-self: end;
+}
+
+.section-04 {
+  margin-top: calc(50px + 280px);
+  position: relative;
+  background-image: url("../img/cat-ugly-position.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 -36px;
+  aspect-ratio: 390 / 240;
+  width: 100%;
+  height: 240px;
+}
+.repaint {
+  width: calc(100% + 64px);
+  height: 100%;
+  background-color: rgba(242, 233, 216, 0.6);
+}
+
+.section-04 .subscribe-container {
+  position: absolute;
+  top: -280px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 326px;
+  padding: 36px 32px 30px;
+  background-color: #263140;
+  color: #fff;
+  border-radius: 18px;
+}
+
+.subscribe-container .text-box {
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.subscribe-container .title {
+  display: inline;
+  width: 194px;
+  font-size: 24px;
+}
+.subscribe-container .desc-text {
+  text-align: left;
+  color: #f2e9d8;
+}
+
+.subscribe-container .input-container {
+  position: relative;
+  margin-top: 42px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.subscribe-container .input-box::before {
+  display: block;
+  color: #000;
+  background-color: red;
+  content: "";
+  position: absolute;
+  left: 16px;
+  top: 11px;
+  width: 18px;
+  height: 18px;
+  background-image: url("../svg/mail.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  aspect-ratio: 1 / 1;
+}
+
+.subscribe-container input {
+  width: 262px;
+  border: none;
+  border-radius: 60px;
+  padding: 12px 48px;
+  font-size: 12px;
+}
+
+.subscribe-container input::placeholder {
+  color: #767676;
+}
+.subscribe-container input:focus {
+  outline: none;
+}
+
+.subscribe-container button {
+  width: min-content;
+  align-self: flex-end;
+}
+
+/* 푸터 */
+footer {
+  padding: 30px 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  position: relative;
+}
+
+.footer-content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 58px;
+}
+
+.footer-content-container .logo-box {
+  width: 112px;
+  height: 34px;
+}
+
+.footer-content-container .logo-box img {
+  aspect-ratio: 112 / 34;
+}
+
+.footer-content-container .sns-container ul {
+  display: flex;
+  gap: 16px;
+  height: 32px;
+}
+
+.sns-container .sns-item img {
+  aspect-ratio: 1 / 1;
+  width: 32px;
+  height: inherit;
+  background-color: #f29d52;
+  border-radius: 50%;
+  padding: 6.86px;
+}
+
+footer .menu-box ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 14px;
+  color: #767676;
+  font-weight: 400;
+  line-height: 100%;
+  margin-bottom: 4px;
+}
+
+footer .menu-box .menu-item {
+  text-align: right;
 }
