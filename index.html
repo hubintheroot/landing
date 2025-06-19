@@ -12,7 +12,7 @@
       <div class="card">
         <div class="img-box"></div>
         <div class="text-box">
-          <h2>Thank you!</h2>
+          <h1>Thank you!</h1>
           <p>Lorem Ipsum is simply dummy text of the printing industry.</p>
         </div>
       </div>
@@ -55,8 +55,14 @@
           </p>
           <button class="btn-download">Download</button>
         </div>
-        <div class="img-box">
-          <img src="./src/img/box-cat.png" alt="박스를 쓴 고양이" />
+        <div class="img-container">
+          <div class="img-box">
+            <img
+              srcset="./src/img/box-cat.png 1919w, ./src/img/box-cat-pc.png"
+              src="./src/img/box-cat.png"
+              alt="박스를 쓴 고양이"
+            />
+          </div>
         </div>
       </section>
       <!-- second section -->
@@ -113,7 +119,8 @@
           <p class="desc-text">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown
+            ever since the 1500s, when an unknown Ipsum is simply dummy text of
+            the printing and typesetting industry.
           </p>
           <button>Learn More</button>
         </div>
@@ -134,15 +141,15 @@
               </p>
             </div>
             <!-- TODO: -->
-            <form action="#" class="input-container">
+            <form id="form-subscribe" action="#" class="input-container">
               <div class="input-box">
                 <input
                   type="email"
-                  id="input-subscribe-email"
+                  name="email"
                   placeholder="Enter your e-mail address"
                 />
+                <button class="subscribe" type="submit">Subscribe</button>
               </div>
-              <button class="subscribe" type="submit">Subscribe</button>
             </form>
             <!-- TODO: -->
           </div>
@@ -189,8 +196,9 @@
     <script>
       const menuBtn = document.querySelector(".btn-menu-toggle");
       const modal = document.querySelector("dialog");
-      const subBtn = document.querySelector("button.subscribe");
       const closeModalBtn = modal.querySelector("button");
+      const form = document.querySelector("#form-subscribe");
+
       let status = false;
 
       menuBtn.addEventListener("click", (e) => {
@@ -202,12 +210,15 @@
         if (isToggle) e.target.classList.remove("open");
         else e.target.classList.add("open");
       });
-
-      subBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        modal.showModal();
-      });
       closeModalBtn.addEventListener("click", (e) => modal.close());
+
+      form.onsubmit = (e) => {
+        e.preventDefault();
+        console.log(e.target);
+        modal.showModal();
+
+        if (false) modal.showModal();
+      };
     </script>
   </body>
 </html>
