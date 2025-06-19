@@ -44,7 +44,7 @@
 
 ## 📸 완성 화면
 
-> <img src="#"  width="768"/> ![Mobile](https://raw.githubusercontent.com/hubintheroot/landing/refs/heads/main/src/img/screenshot-m.png)
+> <img src="https://raw.githubusercontent.com/hubintheroot/landing/refs/heads/main/src/img/screenshot-pc.png"  width="768"/> ![Mobile](https://raw.githubusercontent.com/hubintheroot/landing/refs/heads/main/src/img/screenshot-m.png)
 
 ## 💁‍♂️ 개발자
 
