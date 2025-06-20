@@ -200,23 +200,23 @@
     </footer>
 
     <script>
-      const menuBtn = document.querySelector(".btn-menu-toggle");
-      const modal = document.querySelector("dialog");
-      const closeModalBtn = modal.querySelector("button");
-      const form = document.querySelector("#form-subscribe");
+      const menuBtn = document.querySelector('.btn-menu-toggle');
+      const modal = document.querySelector('dialog');
+      const closeModalBtn = modal.querySelector('button');
+      const form = document.querySelector('#form-subscribe');
 
       let status = false;
 
-      menuBtn.addEventListener("click", (e) => {
-        const status = "open";
+      menuBtn.addEventListener('click', (e) => {
+        const status = 'open';
         isToggle = [...e.target.classList].some(
           (className) => status === className
         );
 
-        if (isToggle) e.target.classList.remove("open");
-        else e.target.classList.add("open");
+        if (isToggle) e.target.classList.remove('open');
+        else e.target.classList.add('open');
       });
-      closeModalBtn.addEventListener("click", (e) => modal.close());
+      closeModalBtn.addEventListener('click', (e) => modal.close());
 
       form.onsubmit = (e) => {
         e.preventDefault();

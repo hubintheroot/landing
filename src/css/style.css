@@ -889,15 +889,3 @@ footer .menu-box .menu-item {
     display: none;
   }
 }
-
-/* @media screen and (min-width: 1920px) {
-  .header {
-    padding: 31px 320px;
-  }
-  .section-01,
-  .section-02,
-  .section-03,
-  footer {
-    padding: 0 320px;
-  }
-} */
