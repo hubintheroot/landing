@@ -570,7 +570,7 @@ footer .menu-box .menu-item {
 
   /* 헤더 */
   header {
-    padding: 31px clamp(40px, 40px, 320px);
+    padding: 31px calc((100vw * 0.33) / 2);
     display: flex;
     justify-content: space-between;
     position: static;
@@ -635,7 +635,7 @@ footer .menu-box .menu-item {
   .section-02,
   .section-03,
   footer {
-    padding: 0 clamp(40px, 40px, 320px);
+    padding: 0 calc((100vw * 0.33) / 2);
   }
 
   /* 섹션 1 */
@@ -680,8 +680,8 @@ footer .menu-box .menu-item {
 
   /* 섹션 2 */
   .section-02 {
-    /* padding: 40px 32px; */
     display: flex;
+    gap: 40px;
     padding-top: 80px;
     padding-bottom: 120px;
     justify-content: space-between;
@@ -889,3 +889,15 @@ footer .menu-box .menu-item {
     display: none;
   }
 }
+
+/* @media screen and (min-width: 1920px) {
+  .header {
+    padding: 31px 320px;
+  }
+  .section-01,
+  .section-02,
+  .section-03,
+  footer {
+    padding: 0 320px;
+  }
+} */
