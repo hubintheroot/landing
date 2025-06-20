@@ -494,7 +494,7 @@ footer .menu-box .menu-item {
 }
 
 /* 반응형 pc화면 용 */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   /* 기본 버튼 디자인 */
   button {
     padding: 15px 29px;
@@ -570,7 +570,7 @@ footer .menu-box .menu-item {
 
   /* 헤더 */
   header {
-    padding: 31px 320px;
+    padding: 31px clamp(40px, 40px, 320px);
     display: flex;
     justify-content: space-between;
     position: static;
@@ -635,7 +635,7 @@ footer .menu-box .menu-item {
   .section-02,
   .section-03,
   footer {
-    padding: 0 320px;
+    padding: 0 clamp(40px, 40px, 320px);
   }
 
   /* 섹션 1 */
