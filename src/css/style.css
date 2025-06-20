@@ -119,10 +119,12 @@ dialog .btn-close-modal {
 }
 
 header {
+  position: sticky;
+  top: 0;
   padding: 24px 20px;
   display: flex;
   justify-content: flex-start;
-  position: relative;
+  z-index: 0;
   background-color: #f2e9d8;
 }
 
@@ -573,7 +575,7 @@ footer .menu-box .menu-item {
     padding: 31px calc((100vw * 0.33) / 2);
     display: flex;
     justify-content: space-between;
-    position: static;
+    /* position: static; */
   }
 
   .logo-box {
