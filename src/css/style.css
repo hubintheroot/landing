@@ -1,7 +1,7 @@
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
 
 * {
-  font-family: "Spoqa Han Sans Neo", "sans-serif";
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -77,7 +77,7 @@ dialog .card {
   flex-direction: column;
   align-items: center;
   gap: 24px;
-  background-image: url("../img/modal-bg-img.png");
+  background-image: url('../img/modal-bg-img.png');
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -86,7 +86,7 @@ dialog .card {
 
 dialog .card .img-box {
   margin-top: 40px;
-  background-image: url("../img/cat-subscribe.png");
+  background-image: url('../img/cat-subscribe.png');
   background-repeat: no-repeat;
   background-size: cover;
   width: 60px;
@@ -154,7 +154,7 @@ header {
 /* 모바일 메뉴 여는 버튼 TODO: pc에서는 숨길 것 */
 .btn-menu-toggle {
   background-color: rgba(0, 0, 0, 0);
-  background-image: url("../svg/menu.svg");
+  background-image: url('../svg/menu.svg');
   background-repeat: no-repeat;
   background-size: 32px 32px;
   width: 32px;
@@ -172,7 +172,7 @@ header {
   background-color: #263140;
 
   & .btn-menu-toggle {
-    background-image: url("../svg/arrow-right.svg");
+    background-image: url('../svg/arrow-right.svg');
   }
   & > :not(.btn-menu-toggle) {
     display: flex;
@@ -291,7 +291,7 @@ footer {
   gap: 20px;
 }
 
-.section-02 [class$="text"] {
+.section-02 [class$='text'] {
   text-align: left;
 }
 
@@ -348,7 +348,7 @@ footer {
 .section-04 {
   margin-top: calc(50px + 280px);
   position: relative;
-  background-image: url("../img/cat-ugly-position.jpg");
+  background-image: url('../img/cat-ugly-position.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 -36px;
@@ -405,13 +405,13 @@ footer {
 
 .subscribe-container .input-box::before {
   display: block;
-  content: "";
+  content: '';
   position: absolute;
   left: 16px;
   top: 11px;
   width: 18px;
   height: 18px;
-  background-image: url("../svg/mail.svg");
+  background-image: url('../svg/mail.svg');
   background-size: cover;
   background-repeat: no-repeat;
   aspect-ratio: 1 / 1;
@@ -494,7 +494,7 @@ footer .menu-box .menu-item {
 }
 
 /* 반응형 pc화면 용 */
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1024px) {
   /* 기본 버튼 디자인 */
   button {
     padding: 15px 29px;
@@ -515,10 +515,10 @@ footer .menu-box .menu-item {
     z-index: 10;
   }
   .btn-top::before {
-    content: "";
+    content: '';
     display: block;
     position: absolute;
-    background-image: url("../svg/top-btn.svg");
+    background-image: url('../svg/top-btn.svg');
     background-repeat: no-repeat;
     background-size: cover;
     width: 40px;
@@ -707,7 +707,7 @@ footer .menu-box .menu-item {
     gap: 20px;
   }
 
-  .section-02 [class$="text"] {
+  .section-02 [class$='text'] {
     text-align: left;
   }
 
@@ -821,7 +821,7 @@ footer .menu-box .menu-item {
 
   .subscribe-container .input-box::before {
     display: block;
-    content: "";
+    content: '';
     position: absolute;
     left: 28px;
     top: 18px;
