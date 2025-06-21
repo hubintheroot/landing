@@ -124,7 +124,7 @@ header {
   padding: 24px 20px;
   display: flex;
   justify-content: flex-start;
-  z-index: 0;
+  z-index: 10;
   background-color: #f2e9d8;
 }
 
