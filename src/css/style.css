@@ -317,16 +317,17 @@ footer {
   color: #d97652;
 }
 
-.section-03 .caroulcel-container {
+.section-03 .carousel-container {
   margin-top: 40px;
   display: flex;
   gap: 20px;
+  width: calc(100% + 32px);
   overflow-x: scroll;
   scrollbar-width: none;
   padding-bottom: 40px;
 }
 
-.section-03 .caroulcel-container .img-box {
+.section-03 .carousel-container .img-box {
   width: 260px;
   height: 260px;
   border-radius: 18px;
@@ -338,10 +339,10 @@ footer {
   }
 }
 
-.section-03 .caroulcel-container + .text-box {
+.section-03 .carousel-container + .text-box {
   margin-top: 20px;
 }
-.section-03 .caroulcel-container + .text-box .desc-text {
+.section-03 .carousel-container + .text-box .desc-text {
   text-align: left;
 }
 
@@ -735,16 +736,17 @@ footer .menu-box .menu-item {
     color: #d97652;
   }
 
-  .section-03 .caroulcel-container {
+  .section-03 .carousel-container {
     margin-top: 88px;
     display: flex;
     justify-content: center;
+    width: auto;
     overflow-x: unset;
     padding-bottom: 0;
     gap: 72px;
   }
 
-  .section-03 .caroulcel-container .img-box {
+  .section-03 .carousel-container .img-box {
     width: 378px;
     height: 378px;
     border-radius: 18px;
@@ -756,13 +758,13 @@ footer .menu-box .menu-item {
     }
   }
 
-  .section-03 .caroulcel-container + .text-box {
+  .section-03 .carousel-container + .text-box {
     margin-top: 90px;
     flex-direction: row;
     gap: 52px;
     justify-content: center;
   }
-  .section-03 .caroulcel-container + .text-box .desc-text {
+  .section-03 .carousel-container + .text-box .desc-text {
     text-align: left;
     width: 739px;
   }

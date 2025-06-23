@@ -19,7 +19,7 @@
       <button class="btn-close-modal">OK! I Love HODU</button>
     </dialog>
     <!-- header -->
-    <header id="top">
+    <header>
       <h1 class="sr-only">호두 랜딩 페이지</h1>
       <div class="logo-box">
         <img src="./src/img/logo.png" alt="HODU" />
@@ -42,8 +42,6 @@
     </header>
     <!-- main -->
     <main>
-      <!-- top button -->
-      <a class="btn-top" href="#top"></a>
       <!-- first section -->
       <section class="section-01">
         <div class="text-box">
@@ -98,7 +96,7 @@
             standard dummy text ever since the 1500s, when an unknown
           </p>
         </div>
-        <ul class="caroulcel-container">
+        <ul class="carousel-container">
           <li>
             <div class="img-box">
               <img
@@ -149,9 +147,11 @@
             <!-- TODO: -->
             <form id="form-subscribe" action="#" class="input-container">
               <div class="input-box">
+                <label for="subscribe-email" class="sr-only">이메일 주소</label>
                 <input
                   type="email"
                   name="email"
+                  id="subscribe-email"
                   placeholder="Enter your e-mail address"
                 />
                 <button class="subscribe" type="submit">Subscribe</button>
@@ -161,6 +161,9 @@
           </div>
         </div>
       </section>
+
+      <!-- top button -->
+      <a class="btn-top" href="#"></a>
     </main>
     <!-- footer -->
     <footer>
