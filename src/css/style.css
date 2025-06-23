@@ -321,6 +321,9 @@ footer {
   margin-top: 40px;
   display: flex;
   gap: 20px;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  padding-bottom: 40px;
 }
 
 .section-03 .caroulcel-container .img-box {
@@ -336,7 +339,7 @@ footer {
 }
 
 .section-03 .caroulcel-container + .text-box {
-  margin-top: 60px;
+  margin-top: 20px;
 }
 .section-03 .caroulcel-container + .text-box .desc-text {
   text-align: left;
@@ -736,6 +739,8 @@ footer .menu-box .menu-item {
     margin-top: 88px;
     display: flex;
     justify-content: center;
+    overflow-x: unset;
+    padding-bottom: 0;
     gap: 72px;
   }
 
